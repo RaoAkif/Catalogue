@@ -1,4 +1,5 @@
 require 'date'
+require 'label'
 
 class Item
   attr_accessor :publish_date, :archived
@@ -14,8 +15,8 @@ class Item
     @genre = genre_name
   end
 
-  def add_label(label_name)
-    @label = label_name
+  def add_label(label)
+    @label = label
   end
 
   def add_author(author_name)
