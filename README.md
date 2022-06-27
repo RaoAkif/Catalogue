@@ -1,4 +1,4 @@
-# PROJECT NAME
+# Catalogue
 
 > Description the project.
 
@@ -7,11 +7,11 @@
 To create a local copy of the project, follow these steps: 
 ##### Open terminal and navigate to the project folder. Then run the following command:
  ```
- git clone https://github.com/RaoAkif/Project_Name
+ git clone https://github.com/RaoAkif/Catalogue
  ```
 ##### Enter the folder with:
  ```
- cd Project_Name
+ cd Catalogue
  ```
 ## Run the Project
 
@@ -29,13 +29,24 @@ rspec
 
 ## Authors
 
-👤 **RaoAkif**
+👤 **Aaron**
 
+- GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
+- Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
+- LinkedIn: [AUTHOR2](https://linkedin.com/in/AUTHOR2)
+
+👤 **RaoAkif**
 - GitHub: [@raoakif](https://github.com/raoakif)
 - Twitter: [@raoakif](https://twitter.com/raoakif)
 - LinkedIn: [RaoAkif](https://linkedin.com/in/raoakif)
 
-👤 **Author2**
+👤 **Have**
+
+- GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
+- Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
+- LinkedIn: [AUTHOR2](https://linkedin.com/in/AUTHOR2)
+
+👤 **Ivan**
 
 - GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
 - Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
