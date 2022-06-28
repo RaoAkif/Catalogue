@@ -1,11 +1,13 @@
 require 'date'
+require './label'
 
 class Item
   attr_accessor :publish_date, :archived
   attr_reader :genre, :author, :source, :label, :id
 
-  def initialize(publish_date, archived: false)
+  def initialize(title, publish_date, archived: false)
     @id = Random.rand(1...100)
+    @title = title
     @publish_date = DateTime.parse(publish_date)
     @archived = archived
   end
@@ -14,8 +16,8 @@ class Item
     @genre = genre_name
   end
 
-  def add_label(label_name)
-    @label = label_name
+  def add_label(label)
+    @label = label
   end
 
   def add_author(author_name)
@@ -31,12 +33,11 @@ class Item
     age_in_days = today - @publish_date
     age_in_years = age_in_days.to_i / 365.25
     return true if age_in_years >= 10
+
     false
   end
 
   def move_to_archive
-    if can_be_archived?
-      @archived = true
-    end
+    @archived = true if can_be_archived?
   end
 end
