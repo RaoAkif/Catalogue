@@ -1,13 +1,18 @@
 require_relative 'book'
+require_relative 'music_album'
 require_relative 'label'
+require_relative 'genre'
 require_relative 'book_creator'
+require_relative 'music_album_creator'
 require_relative 'store'
 
 class Main
   def initialize
-    @book_creator = BookCreator.new
     @store = Store.new
+    @book_creator = BookCreator.new
     @books = @store.load_books
+    @music_album_creator = MusicAlbumCreator.new
+    @music_albums = @store.load_music_albums
     @labels = []
   end
 
@@ -16,7 +21,7 @@ class Main
     when '1'
       @books.each { |book| puts book.title }
     when '2'
-      @labels.each { |label| puts label.title }
+      @music_albums.each { |music_album| puts music_album.title }
     when '3'
       puts 'option 3 selected'
     when '4'
@@ -30,9 +35,9 @@ class Main
     when '8'
       puts 'option 8 selected'
     when '9'
-      puts @books << @book_creator.create_book
+      @books << @book_creator.create_book
     when '10'
-      puts 'option 10 selected'
+      @music_albums << @music_album_creator.create_music_album
     when '11'
       puts 'option 11 selected'
     when '12'
@@ -57,6 +62,7 @@ class Main
       process_selection(selection)
     end
     @store.store_books(@books.map(&:to_hash).to_json)
+    @store.store_music_albums(@music_albums.map(&:to_hash).to_json)
     puts 'Have a great day!'
   end
 end
