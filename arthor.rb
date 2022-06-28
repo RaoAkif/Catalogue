@@ -1,4 +1,4 @@
-class Author < item
+class Author < Item
   attr_accessor :first_name, :last_name, :items = []
   def initialize(first_name, last_name)
     @id = id
