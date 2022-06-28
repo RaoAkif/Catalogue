@@ -14,4 +14,3 @@ class MusicAlbumCreator
     MusicAlbum.new(title, genre, publish_date)
   end
 end
-
