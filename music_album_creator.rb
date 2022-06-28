@@ -1,4 +1,4 @@
-require 'music_album'
+require_relative 'music_album'
 
 class MusicAlbumCreator
   def create_music_album

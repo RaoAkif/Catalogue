@@ -1,6 +1,9 @@
 require_relative 'book'
+require_relative 'music_album'
 require_relative 'label'
+require_relative 'genre'
 require_relative 'book_creator'
+require_relative 'music_album_creator'
 require_relative 'store'
 
 class Main
@@ -18,7 +21,7 @@ class Main
     when '1'
       @books.each { |book| puts book.title }
     when '2'
-      @labels.each { |label| puts label.title }
+      @music_albums.each { |music_album| puts music_album.title }
     when '3'
       puts 'option 3 selected'
     when '4'
@@ -59,6 +62,7 @@ class Main
       process_selection(selection)
     end
     @store.store_books(@books.map(&:to_hash).to_json)
+    @store.store_music_albums(@music_albums.map(&:to_hash).to_json)
     puts 'Have a great day!'
   end
 end
