@@ -1,0 +1,3 @@
+require './book'
+
+require 'yaml'
