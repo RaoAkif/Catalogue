@@ -1,5 +1,5 @@
 class Genre
-  attr_accessor :items
+  attr_accessor :items, :name
 
   def initialize(name)
     @id = Random.rand(1...100)
@@ -12,4 +12,3 @@ class Genre
     item.add_genre(self)
   end
 end
-

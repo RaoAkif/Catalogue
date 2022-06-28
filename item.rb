@@ -39,5 +39,4 @@ class Item
       @archived = true
     end
   end
-
 end

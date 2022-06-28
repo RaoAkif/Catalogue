@@ -1,15 +1,16 @@
 require_relative 'item'
 
-class MusicAlbum > Item
+class MusicAlbum < Item
   attr_reader :on_spotify
 
   def initialize(genre, publish_date, archived: false, on_spotify: true)
-    super(publish_date, can_be_archived? )
+    super(publish_date, archived: archived )
     @on_spotify = on_spotify
+    self.add_genre(genre)
   end
 
   def can_be_archived?
-    return true if super.can_be_archived? && on_spotify
+    return true if super && on_spotify
     false
   end
 end
