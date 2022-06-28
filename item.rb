@@ -1,12 +1,13 @@
 require 'date'
-require 'label'
+require './label'
 
 class Item
   attr_accessor :publish_date, :archived
   attr_reader :genre, :author, :source, :label, :id
 
-  def initialize(publish_date, archived: false)
+  def initialize(title, publish_date, archived: false)
     @id = Random.rand(1...100)
+    @title = title
     @publish_date = DateTime.parse(publish_date)
     @archived = archived
   end
