@@ -31,9 +31,9 @@ rspec
 
 👤 **Aaron**
 
-- GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
-- Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
-- LinkedIn: [AUTHOR2](https://linkedin.com/in/AUTHOR2)
+- GitHub: [@AKeeganDev](https://github.com/AKeeganDev)
+- Twitter: [@AkeeganDev](https://twitter.com/AkeeganDev)
+- LinkedIn: [AKeeganDev](https://linkedin.com/in/AKeeganDev)
 
 👤 **RaoAkif**
 - GitHub: [@raoakif](https://github.com/raoakif)
