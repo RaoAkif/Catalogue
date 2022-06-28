@@ -14,30 +14,30 @@ class Main
   def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity
     case selection
     when '1'
-      @books.each{|book| puts book.title}
+      @books.each { |book| puts book.title }
     when '2'
-      @labels.each{|label| puts label.title}
+      @labels.each { |label| puts label.title }
     when '3'
-      puts "option 3 selected"
+      puts 'option 3 selected'
     when '4'
-      puts "option 4 selected"
+      puts 'option 4 selected'
     when '5'
-      puts "option 5 selected"
+      puts 'option 5 selected'
     when '6'
-      puts "option 6 selected"
+      puts 'option 6 selected'
     when '7'
-      puts "option 7 selected"
+      puts 'option 7 selected'
     when '8'
-      puts "option 8 selected"
+      puts 'option 8 selected'
     when '9'
       puts @books << @book_creator.create_book
     when '10'
-      puts "option 8 selected"
+      puts 'option 10 selected'
     when '11'
-      puts "option 8 selected"
+      puts 'option 11 selected'
     when '12'
-      puts "option 8 selected"
-    when '0' then "Have a nice day"
+      puts 'option 12 selected'
+    when '0' then 'Have a nice day'
     else
       puts 'Invalid selection'
     end
@@ -45,27 +45,19 @@ class Main
 
   def interface
     selection = nil
+    options = ['1 - List all books', '2 - List all music albums', '3 - List all movies', '4 - List all games',
+               '5 - List all genres', '6 - List all labels', '7 - List all authors', '8 - List all sources',
+               '9 - Create a book', '10 - Create a music album', '11 - Create a movie', '12 - Create a game',
+               '0 - Exit']
     until selection == '0'
       puts "Welcome to Catalog App!\n\n"
       puts 'Please choose an option by entering a number:'
-      puts '1 - List all books'
-      puts '2 - List all music albums'
-      puts '3 - List all movies'
-      puts '4 - List all games'
-      puts '5 - List all genres'
-      puts '6 - List all labels'
-      puts '7 - List all authors'
-      puts '8 - List all sources'
-      puts '9 - Create a book'
-      puts '10 - Create a music album'
-      puts '11 - Create a movie'
-      puts '12 - Create a game'
-      puts '0 - Exit'
+      options.each { |option| puts option }
       selection = gets.chomp.to_s
       process_selection(selection)
     end
-    @store.store_books(@books.map{|book| book.to_hash}.to_json)
-    puts "Have a great day!"
+    @store.store_books(@books.map(&:to_hash).to_json)
+    puts 'Have a great day!'
   end
 end
 

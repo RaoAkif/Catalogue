@@ -26,7 +26,8 @@ describe Book do
     end
 
     it 'Tests to make sure our test book becomes the correct format in order to store between sessions' do
-      actual = {title: 'Game of Thrones', publish_date: '2000-01-01', publisher: 'GoT Publishing', cover_state: 'Good', author: 'George RR Martin'}
+      actual = { title: 'Game of Thrones', publish_date: '2000-01-01', publisher: 'GoT Publishing', cover_state: 'Good',
+                 author: 'George RR Martin' }
       expect(@book_to_test.to_hash).to eq actual
     end
   end

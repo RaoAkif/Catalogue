@@ -33,13 +33,11 @@ class Item
     age_in_days = today - @publish_date
     age_in_years = age_in_days.to_i / 365.25
     return true if age_in_years >= 10
+
     false
   end
 
   def move_to_archive
-    if can_be_archived?
-      @archived = true
-    end
+    @archived = true if can_be_archived?
   end
-
 end
