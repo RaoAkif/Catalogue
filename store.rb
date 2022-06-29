@@ -23,7 +23,9 @@ class Store
     return [] if file_data == ''
 
     JSON.parse(file_data, symbolize_names: true).map do |book|
-      Book.new(book[:title], book[:publish_date], book[:publisher], book[:cover_state], book[:author])
+      author = Author.new(book[:author][:first_name], book[:author][:last_name])
+      label = Label.new(book[:label][:title], book[:label][:color])
+      Book.new(book[:title], book[:publish_date], book[:publisher], book[:cover_state], author, label)
     end
   end
 

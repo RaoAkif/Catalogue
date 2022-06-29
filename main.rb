@@ -21,7 +21,6 @@ class Main
     @game_creator = GameCreator.new
     @movie_creator = MovieCreator.new
     @movies = @store.load_movies
-    @labels = []
   end
 
   def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
@@ -37,9 +36,9 @@ class Main
     when '5'
       puts 'option 5 selected'
     when '6'
-      puts 'option 6 selected'
+      @books.each { |book| puts book.label.title }
     when '7'
-      puts 'option 7 selected'
+      @books.each { |book| puts "#{book.author.first_name} #{book.author.last_name}" }
     when '8'
       puts 'option 8 selected'
     when '9'
