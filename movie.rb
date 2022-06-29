@@ -17,6 +17,6 @@ class Movie < Item
   end
 
   def to_hash
-    { title: @title, genre: @genre, source: @source, publish_date: @publish_date.strftime('%Y-%m-%d') }
+    { title: @title, genre: @genre.to_hash, source: @source.to_hash, publish_date: @publish_date.strftime('%Y-%m-%d') }
   end
 end

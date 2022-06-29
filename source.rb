@@ -11,4 +11,8 @@ class Source
     @items.push(item)
     item.add_source(self)
   end
+
+  def to_hash
+    { name: @name }
+  end
 end

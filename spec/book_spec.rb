@@ -8,8 +8,9 @@ describe Book do
       @publish_date = '2000-01-01'
       @publisher = 'GoT Publishing'
       @cover_state = 'Good'
-      @author = 'George RR Martin'
-      @book_to_test = Book.new(@title, @publish_date, @publisher, @cover_state, @author)
+      @author = Author.new('George', 'Martin')
+      @label = Label.new('Fantasy', 'Purple')
+      @book_to_test = Book.new(@title, @publish_date, @publisher, @cover_state, @author, @label)
     end
 
     it 'Check to see if variable is assigned to an instance of the book class' do
@@ -27,7 +28,7 @@ describe Book do
 
     it 'Tests to make sure our test book becomes the correct format in order to store between sessions' do
       actual = { title: 'Game of Thrones', publish_date: '2000-01-01', publisher: 'GoT Publishing', cover_state: 'Good',
-                 author: 'George RR Martin' }
+                 author: { first_name: 'George', last_name: 'Martin' }, label: { title: 'Fantasy', color: 'Purple' } }
       expect(@book_to_test.to_hash).to eq actual
     end
   end
