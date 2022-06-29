@@ -15,5 +15,5 @@ class MovieCreator
     publish_date = gets.chomp
 
     Movie.new(title, genre, source, publish_date)
-  end  
+  end
 end

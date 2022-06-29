@@ -24,7 +24,7 @@ class Main
     @labels = []
   end
 
-  def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity
+  def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
     case selection
     when '1'
       @books.each { |book| puts book.title }
