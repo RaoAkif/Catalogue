@@ -5,6 +5,8 @@ require_relative 'genre'
 require_relative 'book_creator'
 require_relative 'music_album_creator'
 require_relative 'store'
+require_relative 'game'
+require_relative 'game_creator'
 
 class Main
   def initialize
@@ -13,6 +15,8 @@ class Main
     @books = @store.load_books
     @music_album_creator = MusicAlbumCreator.new
     @music_albums = @store.load_music_albums
+    @games = @store.load_games
+    @game_creator = GameCreator.new
     @labels = []
   end
 
@@ -25,7 +29,7 @@ class Main
     when '3'
       puts 'option 3 selected'
     when '4'
-      puts 'option 4 selected'
+      @games.each { |game| puts game.title }
     when '5'
       puts 'option 5 selected'
     when '6'
@@ -41,7 +45,7 @@ class Main
     when '11'
       puts 'option 11 selected'
     when '12'
-      puts 'option 12 selected'
+      @games << @game_creator.create_game
     when '0' then 'Have a nice day'
     else
       puts 'Invalid selection'
@@ -63,6 +67,7 @@ class Main
     end
     @store.store_books(@books.map(&:to_hash).to_json)
     @store.store_music_albums(@music_albums.map(&:to_hash).to_json)
+    @store.store_games(@games.map(&:to_hash).to_json)
     puts 'Have a great day!'
   end
 end

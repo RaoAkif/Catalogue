@@ -1,8 +1,8 @@
-require 'item'
+require_relative 'item'
 require 'date'
 
 class Game < Item
-  attr_accessor :multiplayer: true last_played_at
+  attr_accessor :multiplayer, :last_played_at, :title
 
   def initialize(title, publish_date, last_played_at, multiplayer: true, archeived: false)
     super(title, publish_date)
@@ -15,11 +15,11 @@ class Game < Item
     age_in_days = today - @last_played_at
     age_in_years = age_in_days.to_i / 365.25
     return true if super && age_in_years > 2
+
     false
   end
 
   def to_hash
-    { title: @title, publish_date: @publish_date, last_played_at: @last_played_at.strftime('%Y-%m-%d'), multiplayer: @multiplayer }
+    { title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), last_played_at: @last_played_at.strftime('%Y-%m-%d'), multiplayer: @multiplayer }
   end
-
 end
