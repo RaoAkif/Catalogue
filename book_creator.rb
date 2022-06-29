@@ -29,5 +29,4 @@ class BookCreator
 
     Book.new(title, publish_date, publisher, cover_state, author, label)
   end
-
 end

@@ -35,7 +35,9 @@ class Store
     return [] if file_data == ''
 
     JSON.parse(file_data, symbolize_names: true).map do |music_album|
-      MusicAlbum.new(music_album[:title], music_album[:genre], music_album[:publish_date])
+      genre = Genre.new(music_album[:genre][:name])
+      source = Source.new(music_album[:source][:name])
+      MusicAlbum.new(music_album[:title], genre, source, music_album[:publish_date])
     end
   end
 
@@ -55,7 +57,9 @@ class Store
     return [] if file_data == ''
 
     JSON.parse(file_data, symbolize_names: true).map do |movie|
-      Movie.new(movie[:title], movie[:genre], movie[:source], movie[:publish_date])
+      genre = Genre.new(movie[:genre][:name])
+      source = Source.new(movie[:source][:name])
+      Movie.new(movie[:title], genre, source, movie[:publish_date])
     end
   end
 end

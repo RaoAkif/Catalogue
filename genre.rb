@@ -11,4 +11,8 @@ class Genre
     @items.push(item)
     item.add_genre(self)
   end
+
+  def to_hash
+    { name: @name }
+  end
 end
