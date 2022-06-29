@@ -5,8 +5,8 @@ describe Movie do
   context 'When testing the Movie Class and its Methods' do
     before :each do
       @title = 'Spiderman'
-      @genre = 'Fiction'
-      @source = 'Disney Plus'
+      @genre = Genre.new('Fiction')
+      @source = Source.new('Disney Plus')
       @publish_date = '2010-01-01'
       @my_movie = Movie.new(@title, @genre, @source, @publish_date)
     end
@@ -21,7 +21,7 @@ describe Movie do
     end
 
     it 'Tests to make sure our test Movie becomes the correct format in order to store between sessions' do
-      actual = { title: 'Spiderman', genre: 'Fiction', source: 'Disney Plus', publish_date: '2010-01-01' }
+      actual = { title: 'Spiderman', genre: { name: 'Fiction' }, source: { name: 'Disney Plus' }, publish_date: '2010-01-01' }
       expect(@my_movie.to_hash).to eq actual
     end
   end
