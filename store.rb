@@ -13,6 +13,10 @@ class Store
     File.write('./Data/games_data.json', obj)
   end
 
+  def store_movies(obj)
+    File.write('./Data/movies_data.json', obj)
+  end
+
   def load_books
     books_file = File.open('./Data/books_data.json')
     file_data = books_file.read
@@ -40,6 +44,16 @@ class Store
 
     JSON.parse(file_data, symbolize_names: true).map do |game|
       Game.new(game[:title], game[:publish_date], game[:last_played_at])
+    end
+  end
+
+  def load_movies
+    movies_file = File.open('./Data/movies_data.json')
+    file_data = movies_file.read
+    return [] if file_data == ''
+
+    JSON.parse(file_data, symbolize_names: true).map do |movie|
+      Movie.new(movie[:title], movie[:genre], movie[:source], movie[:publish_date])
     end
   end
 end

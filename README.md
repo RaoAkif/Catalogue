@@ -42,15 +42,15 @@ rspec
 
 👤 **Have**
 
-- GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
-- Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
-- LinkedIn: [AUTHOR2](https://linkedin.com/in/AUTHOR2)
+- GitHub: [Have-Samuel](https://github.com/Have-Samuel)
+- Twitter: [@samhave1](https://twitter.com/@samhave1)
+- LinkedIn: [Have Samuel Kabreebe](https://linkedin.com/in/Have-Samuel-Kabreebe) 
 
 👤 **Ivan**
 
-- GitHub: [@AUTHOR2](https://github.com/AUTHOR2)
-- Twitter: [@AUTHOR2](https://twitter.com/AUTHOR2)
-- LinkedIn: [AUTHOR2](https://linkedin.com/in/AUTHOR2)
+- GitHub: [@ivaan1992](github.com/ivaan1992)
+- Twitter: [@ivangaona92](https://twitter.com/ivangaona92)
+- LinkedIn: [Ivan1992](https://www.linkedin.com/in/ivan-linares-gaona/)
 
 ## 🤝 Contributing
 

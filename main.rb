@@ -7,6 +7,8 @@ require_relative 'music_album_creator'
 require_relative 'store'
 require_relative 'game'
 require_relative 'game_creator'
+require_relative 'movie'
+require_relative 'movie_creator'
 
 class Main
   def initialize
@@ -17,17 +19,19 @@ class Main
     @music_albums = @store.load_music_albums
     @games = @store.load_games
     @game_creator = GameCreator.new
+    @movie_creator = MovieCreator.new
+    @movies = @store.load_movies
     @labels = []
   end
 
-  def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity
+  def process_selection(selection) # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
     case selection
     when '1'
       @books.each { |book| puts book.title }
     when '2'
       @music_albums.each { |music_album| puts music_album.title }
     when '3'
-      puts 'option 3 selected'
+      @movies.each { |movie| puts movie.title }
     when '4'
       @games.each { |game| puts game.title }
     when '5'
@@ -43,7 +47,7 @@ class Main
     when '10'
       @music_albums << @music_album_creator.create_music_album
     when '11'
-      puts 'option 11 selected'
+      @movies << @movie_creator.create_movie
     when '12'
       @games << @game_creator.create_game
     when '0' then 'Have a nice day'
@@ -68,6 +72,7 @@ class Main
     @store.store_books(@books.map(&:to_hash).to_json)
     @store.store_music_albums(@music_albums.map(&:to_hash).to_json)
     @store.store_games(@games.map(&:to_hash).to_json)
+    @store.store_movies(@movies.map(&:to_hash).to_json)
     puts 'Have a great day!'
   end
 end
