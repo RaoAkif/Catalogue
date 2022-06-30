@@ -3,6 +3,7 @@
 > This is a Ruby Catalogue CLI designed to keep track of your things (books, movies, music albums and games). This CLI will allow you to add items in lists of various Genre and saving them in Local DB file, to access later, when needed.
 
 ## Getting Started
+#### [Live Demo Link](https://drive.google.com/file/d/1DwREXl_dCgAYhjEplJ59zI9dN28IYqBW/view?usp=sharing)
 
 To create a local copy of the project, follow these steps: 
 ##### Open terminal and navigate to the project folder. Then run the following command:
