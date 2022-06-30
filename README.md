@@ -37,8 +37,8 @@ rspec
 - LinkedIn: [AKeeganDev](https://linkedin.com/in/AKeeganDev)
 
 👤 **RaoAkif**
-- GitHub: [@raoakif](https://github.com/raoakif)
-- Twitter: [@raoakif](https://twitter.com/raoakif)
+- GitHub: [@RaoAkif](https://github.com/raoakif)
+- Twitter: [@RaoAkif](https://twitter.com/raoakif)
 - LinkedIn: [RaoAkif](https://linkedin.com/in/raoakif)
 
 👤 **Have**
