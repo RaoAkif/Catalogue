@@ -1,0 +1,10 @@
+require_relative '../book'
+require_relative '../music_album'
+require_relative '../game'
+require_relative '../movie'
+require_relative '../author'
+require_relative '../label'
+require_relative '../source'
+require_relative '../genre'
+
+require 'yaml'
